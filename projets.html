@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="projets.css">
+  <link rel="icon" type="image/png" href="image/icone4.png" />
+
+  <title>Projets – Claron Cyriel BEMBA</title>
+  
+</head>
+<body>
+   <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+       <a href="index.html" aria-label="Retour à la page d’accueil">
+      <h1>CLA<span class="accent">Ron</span></h1>
+      </a>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+      <!-- 🌙/☀️ Toggle du mode -->
+      <button id="theme-toggle" class="theme-toggle">
+          <span class="theme-toggle"><i class="fa-solid fa-moon"></i></span>     
+      </button> 
+
+      <button id="burger" class="burger" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+        <span class="burger-lines"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      
+      <ul id="nav-list" class="nav-list" aria-hidden="true">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="projets.html" class="active">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Mes Projets</h2>
+    <p class="subtitle">Réalisations en réseaux, systèmes, cybersécurité, cloud et télécommunications</p>
+    <p class="intro">Découvrez mes projets pratiques, illustrant mes compétences en configuration réseau, sécurité, système et scripting.</p>
+  </section>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="reseaux">Administration Réseau</button>
+    <button class="filter-btn" data-filter="systeme">Administration Système</button>
+    <button class="filter-btn" data-filter="cyber">Cybersécurité</button>
+    <button class="filter-btn" data-filter="cloud">Cloud Computing</button>
+    <button class="filter-btn" data-filter="script">Scripting & Automatisation</button>
+    <button class="filter-btn" data-filter="web">Développement web</button>
+    <button class="filter-btn" data-filter="telecom">Télécommunications</button>
+  </div>
+
+  <section class="projects-grid">
+
+    <div class="project-card reseaux"
+         data-images='["images_projets/NAT & PAT/1.png","images_projets/NAT & PAT/2.png","images_projets/NAT & PAT/3.png","images_projets/NAT & PAT/4.png", "images_projets/NAT & PAT/5.png", "images_projets/NAT & PAT/6.png", "images_projets/NAT & PAT/7.png", "images_projets/NAT & PAT/8.png", "images_projets/NAT & PAT/9.png", "images_projets/NAT & PAT/10.png", "images_projets/NAT & PAT/11.png", "images_projets/NAT & PAT/12.png", "images_projets/NAT & PAT/13.png"]'
+         data-pdf="images_projets/NAT & PAT/NAT&PAT.pdf">
+
+      <h3>🌐 Mise en œuvre du NAT & PAT dans un réseau Cisco</h3>
+      <div class="image-container">
+        <img src="images_projets/NAT & PAT/Principal.png" alt="Traduction d'adresses">
+        <div class="image-overlay">👉 Voir le projet</div>
+      </div>
+      <div class="project-info">
+        <p class="category">Administration Réseau</p>
+        <p><strong>Technologies :</strong> Cisco, NAT statique, NAT dynamique, PAT</p>
+        <p><strong>Description :</strong> Configuration et mise en œuvre des différentes formes de traduction d’adresses (NAT et PAT) sous Cisco Packet Tracer. Le projet démontre la gestion des adresses IP privées et publiques ainsi que la connectivité entre réseaux internes et externes.</p>
+        <p><strong>Résultat :</strong> Compréhension approfondie du fonctionnement du NAT et du PAT, et amélioration de la gestion des ressources réseau dans un environnement simulé.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="project-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="modal-media"></div>
+      <div class="modal-details"></div>
+      <div class="modal-links">
+        <a href="images_projets/NAT & PAT/NAT&PAT.pdf" class="pdf-btn" target="_blank">Télécharger PDF</a>
+        <a href="#" class="github-btn" target="_blank">Voir GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Claron Cyriel BEMBA – Tous droits réservés.</p>
+  </footer>
+
+  <script defer src="projets.js"></script>
+</body>
+</html>

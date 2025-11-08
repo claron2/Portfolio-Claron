@@ -1,0 +1,599 @@
+/* ============================= */
+/*         STYLE GLOBAL          */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* ============================= */
+/*   VARIABLES GLOBALES          */
+/* ============================= */
+:root {
+  --bg-dark: #0a0a0a;
+  --bg-deep: #120202;
+  --red-1: #ff2a2a;
+  --red-2: #b00000;
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 0, 0, 0.18);
+}
+
+/* Reset + base */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #0c0c0c, #1a0000, #330000);
+  color: #e8e8e8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.7;
+  padding: 0 5%;
+}
+
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+  padding: 18px 30px;
+  position: sticky;
+  top: 15px;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+}
+
+/* ============================= */
+/*            LOGO               */
+/* ============================= */
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  position: relative;
+}
+
+.logo a:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(255, 60, 60, 0.7));
+}
+
+.logo h1 {
+  color: var(--red-1);
+  font-family: "Dancing Script", cursive;
+  font-size: 35px;
+  transition: text-shadow 0.4s ease;
+}
+
+.logo .accent {
+  background: linear-gradient(90deg, var(--red-1), var(--red-2));
+  color: white;
+  padding: 4px 10px;
+  border-radius: 25px;
+}
+
+/* Glow pulsant doux au survol */
+.logo a:hover h1 {
+  text-shadow: 0 0 8px rgba(255, 50, 50, 0.8),
+    0 0 14px rgba(255, 60, 60, 0.6),
+    0 0 22px rgba(255, 80, 80, 0.4);
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    text-shadow: 0 0 6px rgba(255, 40, 40, 0.5),
+      0 0 10px rgba(255, 60, 60, 0.4),
+      0 0 18px rgba(255, 80, 80, 0.2);
+  }
+  to {
+    text-shadow: 0 0 10px rgba(255, 70, 70, 0.9),
+      0 0 20px rgba(255, 100, 100, 0.7),
+      0 0 35px rgba(255, 120, 120, 0.5);
+  }
+}
+
+/* Impulsion lumineuse au clic */
+.logo a:active h1 {
+  animation: clickPulse 0.3s ease-out;
+}
+
+@keyframes clickPulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(255, 80, 80, 0.7);
+  }
+  50% {
+    transform: scale(0.96);
+    text-shadow: 0 0 12px rgba(255, 40, 40, 1);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(255, 80, 80, 0.7);
+  }
+}
+
+/* ============================= */
+/*            NAVBAR             */
+/* ============================= */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--red-1);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: var(--red-1);
+}
+
+/* ============================= */
+/* BACKGROUND ANIMÉ              */
+/* ============================= */
+.background-animation {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.11;
+  animation: orbFloat 8s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 420px;
+  height: 420px;
+  background: var(--red-1);
+  top: 8%;
+  left: 8%;
+}
+
+.orb-2 {
+  width: 340px;
+  height: 340px;
+  background: var(--red-2);
+  bottom: 6%;
+  right: 10%;
+}
+
+.orb-3 {
+  width: 300px;
+  height: 300px;
+  background: #ff784e;
+  top: 48%;
+  left: 36%;
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+/* ============================= */
+/* CONTACT MAIN CARD             */
+/* ============================= */
+.contact-main {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 90px;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 980px;
+  position: relative;
+  border-radius: 18px;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(176, 0, 0, 0.05) inset;
+  backdrop-filter: blur(10px) saturate(120%);
+}
+
+/* ============================= */
+/* HEADER FORMULAIRE             */
+/* ============================= */
+.card-header {
+  text-align: center;
+  margin-bottom: 14px;
+}
+.card-header h2 {
+  font-size: 2.4rem;
+  color: var(--red-1);
+  margin: 0;
+}
+.card-header h2 span {
+  color: #fff;
+  display: inline-block;
+  margin-left: 6px;
+}
+.card-header p {
+  color: #d6d6d6;
+  margin-top: 10px;
+  font-size: 0.98rem;
+}
+
+/* ============================= */
+/* FORMULAIRE                    */
+/* ============================= */
+.contact-form {
+  display: block;
+  margin-top: 8px;
+}
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex: 1;
+}
+.input-group label {
+  font-size: 0.85rem;
+  color: #cfcfcf;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 0.96rem;
+  outline: none;
+  transition: box-shadow 0.25s, transform 0.15s;
+}
+input:focus,
+textarea:focus {
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.12);
+  transform: translateY(-2px);
+  border-color: rgba(255, 0, 0, 0.35);
+}
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ============================= */
+/* BOUTON ENVOYER + FEEDBACK     */
+/* ============================= */
+.form-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn-send {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--red-1), var(--red-2));
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.98rem;
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.btn-send:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(255, 0, 0, 0.26);
+}
+
+/* messages de feedback */
+.feedback {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  pointer-events: none;
+  margin-top: 10px;
+}
+
+.msg {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-width: 280px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+}
+.msg.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.msg.success {
+  background: rgba(0, 255, 136, 0.08);
+  color: #9fffd6;
+  border: 1px solid rgba(0, 255, 136, 0.12);
+}
+.msg.error {
+  background: rgba(255, 0, 0, 0.05);
+  color: #ffb4b4;
+  border: 1px solid rgba(255, 0, 0, 0.08);
+}
+.msg .icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+/* ============================= */
+/* FOOTER CONTACT                */
+/* ============================= */
+.contact-footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 30px 10px 60px;
+  color: #ddd;
+}
+.contact-footer .follow-title {
+  font-weight: 700;
+  color: var(--red-1);
+  margin-bottom: 16px;
+}
+.socials {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.socials a {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--red-1);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 0, 0, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s;
+}
+.socials a:hover {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 10px 30px rgba(176, 0, 0, 0.18);
+  background: linear-gradient(135deg, rgba(255, 42, 42, 0.12), rgba(176, 0, 0, 0.1));
+  color: white;
+}
+.socials a i {
+  font-size: 1.1rem;
+}
+
+/* ============================= */
+/* BURGER (MOBILE)               */
+/* ============================= */
+.burger {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: #ff4444;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 1150;
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+@media (max-width: 900px) {
+  .contact-card {
+    padding: 18px;
+    margin: 0 10px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .burger {
+    display: block;
+  }
+  .navbar ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    background: rgba(6, 6, 6, 0.95);
+    transform: scale(0.96) translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.45s ease, transform 0.45s cubic-bezier(.2, .9, .2, 1);
+    z-index: 1100;
+  }
+  .navbar ul.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+  }
+  .navbar ul a {
+    font-size: 1.8rem;
+    color: var(--red-1);
+    opacity: 0;
+    transform: translateY(18px);
+    transition: transform 0.45s ease, opacity 0.45s ease;
+  }
+  .navbar ul.show a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .header {
+    padding: 16px 18px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar ul a {
+    font-size: 1.4rem;
+  }
+  .msg {
+    min-width: 220px;
+    font-size: 0.9rem;
+    padding: 9px 12px;
+  }
+}
+
+/* ============================= */
+/*        TOGGLE DARK/LIGHT      */
+/* ============================= */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: #ff2a2a;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: transform 0.25s ease, color 0.3s ease;
+  float: right;
+  display: flex;
+}
+.theme-toggle:hover {
+  transform: rotate(25deg);
+  color: #ff5555;
+}
+
+body.light-mode {
+  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  color: #111;
+  transition: background 0.5s ease, color 0.3s ease;
+}
+body.light-mode .header {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 0, 0, 0.15);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.1);
+}
+body.light-mode .navbar a {
+  color: black;
+}
+body.light-mode .navbar a.active,
+body.light-mode .navbar a:hover {
+  color: #d00000;
+}
+body.light-mode .contact-card {
+  background: #fff;
+  color: #333;
+  border-color: #d00000;
+}
+body.light-mode input,
+body.light-mode textarea {
+  background: #f4f4f4;
+  color: #222;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+body.light-mode label {
+  color: #333;
+}
+body.light-mode .btn-send {
+  background: linear-gradient(90deg, #ff5555, #d00000);
+}
+body.light-mode .theme-toggle {
+  color: #c00000;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.2);
+}
+body.light-mode .card-header span,
+body.light-mode .card-header p {
+  color: #000;
+}
+
+body.light-mode .con {
+  color: black;
+}
+
+body.light-mode .socials a {
+  background-color: white;
+}
+
+body.light-mode .socials a:hover {
+  background-color:  #ff2a2a;
+}
+
+/* ============================= */
+/* ANIMATION D'ENTRÉE CONTACT    */
+/* ============================= */
+.contact-card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

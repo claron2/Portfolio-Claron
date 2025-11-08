@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <title>Parcours Claron Cyriel BEMBA</title>
+    <link rel="icon" type="image/png" href="image/icone4.png" />
+  <link rel="stylesheet" href="parcours.css" />
+</head>
+<body>
+
+ <!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <a href="index.html" aria-label="Retour à la page d’accueil">
+      <h1>CLA<span class="accent">Ron</span></h1>
+    </a>
+  </div>
+
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+     <!-- 🌙/☀️ Toggle du mode -->
+    <button id="theme-toggle" class="theme-toggle">
+         <span class="theme-toggle"><i class="fa-solid fa-moon"></i></span>
+    </button>
+       
+    <!-- Bouton Burger -->
+    <button id="burger" class="burger" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+         <span><i class="fa-solid fa-bars"></i></span>
+    </button>
+
+    <ul id="nav-list" class="nav-list" aria-hidden="true">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="parcours.html" class="active">Parcours</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    
+  </nav>
+</header>
+
+
+  <!-- CONTENU PRINCIPAL -->
+  <div class="header-content">
+    <h2>Mon Parcours</h2>
+    <p>Découvrez mon évolution académique et mes certifications professionnelles.</p>
+  </div>
+
+  <section class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">2021 - 2022</div>
+      <div class="timeline-content">
+        <h3>Baccalauréat Scientifique, Série C</h3>
+        <p>Obtenu au CS La Poudrière, Brazzaville, République du Congo.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2022 - 2025</div>
+      <div class="timeline-content">
+        <h3>Licence Professionnelle en Réseaux et Télécommunications</h3>
+        <p>Obtenue à l’Institut d’Administration des Entreprises (IAE), Brazzaville, République du Congo.</p>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="timeline-item">
+      <div class="timeline-date">Certifications</div>
+      <div class="timeline-content">
+
+        <div class="certification">
+          <h3>Fortinet FortiGate 7.6 Operator</h3>
+          <ul class="certif">
+            <li><strong>Organisme :</strong> Fortinet</li>
+            <li><strong>Date d'obtention :</strong> Septembre 2025</li>
+            <li><strong>Date d'expiration :</strong> Septembre 2027</li>
+            <li><strong>Identifiant :</strong> 4476411325CC</li>
+          </ul>
+          <div class="certif-image">
+            <img src="certificats/Fortinet_preview.jpg" alt="Fortinet FortiGate 7.6 Operator">
+          </div>
+        </div>
+
+        <div class="certification">
+          <h3>Introduction to Cybersecurity</h3>
+          <ul>
+            <li><strong>Organisme :</strong> Cisco</li>
+            <li><strong>Date d'obtention :</strong> Septembre 2025</li>
+            <li><strong>Domaine :</strong> Fondamentaux de la cybersécurité</li>
+          </ul>
+          <div class="certif-image">
+            <img src="certificats/cisco-cybersecurity.png" alt="Cisco Introduction to Cybersecurity">
+          </div>
+        </div>
+
+        <div class="certification">
+          <h3>Network Defense</h3>
+          <ul>
+            <li><strong>Organisme :</strong> Cisco</li>
+            <li><strong>Date d'obtention :</strong> Septembre 2025</li>
+            <li><strong>Identifiant :</strong> 03aa1509-9774-4d41-adab-341882078387</li>
+            <li><strong>Domaine :</strong> Sécurité et protection des réseaux</li>
+          </ul>
+          <div class="certif-image">
+            <img src="certificats/Network_Defense.png" alt="Cisco Network Defense">
+          </div>
+        </div>
+
+        <div class="certification">
+          <h3>Network Support and Security</h3>
+          <ul>
+            <li><strong>Organisme :</strong> Cisco</li>
+            <li><strong>Date d'obtention :</strong> Septembre 2025</li>
+            <li><strong>Identifiant :</strong>01723924-fc2c-4fdb-9904-e12009ab9c01</li>
+            <li><strong>Domaine :</strong> Sécurité et protection des réseaux</li>
+          </ul>
+          <div class="certif-image">
+            <img src="certificats/Network_Support_and_Security.png" alt="Support et sécurité des réseaux">
+          </div>
+        </div>
+
+        <div class="certification">
+          <h3>Networking Basics</h3>
+          <ul>
+            <li><strong>Organisme :</strong> Cisco</li>
+            <li><strong>Date d'obtention :</strong> juil 2025</li>
+            <li><strong>Domaine :</strong>Notions de base sur les réseaux</li>
+          </ul>
+          <div class="certif-image">
+            <img src="certificats/Notions de base sur les réseaux.jpg" alt="Notions de base sur les réseaux">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modale image -->
+  <div class="image-modal" id="imageModal">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <img id="modalImg" src="" alt="Certification en grand">
+  </div>
+
+  <script src="parcours.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="competences.css">
+  <link rel="icon" type="image/png" href="image/icone4.png" />
+
+  <title>Compétences - Claron Cyriel BEMBA</title>
+</head>
+<body>
+
+ <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html" aria-label="Retour à la page d’accueil">
+      <h1>CLA<span class="accent">Ron</span></h1>
+      </a>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+     <!-- 🌙/☀️ Toggle du mode -->
+      <button id="theme-toggle" class="theme-toggle">
+          <span class="theme-toggle"><i class="fa-solid fa-moon"></i></span>     
+      </button>
+
+       <button id="burger" class="burger" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+        <span class="burger-lines"><i class="fa-solid fa-bars"></i></span>
+       </button>
+
+      <ul id="nav-list" class="nav-list" aria-hidden="true">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="competences.html" class="active">Compétences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE COMPETENCES -->
+  <main class="competences-page">
+    <section class="competences-intro">
+      <h2>Mes Compétences</h2>
+      <p>Découvrez mes domaines d’expertise et technologies maîtrisées dans le domaine des réseaux, systèmes et sécurité.</p>
+    </section>
+
+    <section class="competences-list">
+      <div class="competence-card">
+        <i class="fas fa-network-wired"></i>
+        <h3>Administration des Réseaux</h3><br>
+        <h4>Connaissances pratiques en conception et gestion de réseaux d’entreprise.</h4>
+        <p> • Configuration de routeurs et commutateurs pour les réseaux LAN / WAN <br>
+            • Mise en place du routage statique et dynamique et des VLAN. <br>
+            • Application des politiques d’accès (ACL) et configuration du NAT, DHCP et DNS. <br>
+            • Diagnostic et résolution d’incidents de connectivité sur les équipements réseau. <br>
+        </p>
+      </div>
+
+      <div class="competence-card">
+        <i class="fas fa-server"></i>
+        <h3>Administration des Systèmes</h3><br>
+        <h4>Gestion de serveurs Windows et Linux dans un environnement de test ou de production.</h4>
+        <p> • Installation, configuration et maintenance des systèmes.<br>
+            • Gestion des utilisateurs et des droits via Active Directory ou Linux.<br>
+            • Déploiement des services essentiels (DHCP, DNS, FTP).<br>
+            • Suivi de l’activité du système et automatisation de tâches simples.<br>
+        </p>
+      </div>
+
+      <div class="competence-card">
+        <i class="fas fa-cubes"></i>
+        <h3>Virtualisation</h3><br>
+        <h4>Capacité à déployer et gérer des environnements virtuels pour les besoins de test et de formation.</h4>
+        <p>• Création et configuration de machines virtuelles.<br>
+           • Gestion de réseaux virtuels isolés.<br>
+           • Répartition et optimisation des ressources matérielles virtuelles.<br>
+          
+        </p>
+      </div>
+
+
+        <div class="competence-card">
+        <i class="fa-solid fa-cloud"></i>
+        <h3>Cloud Computing</h3><br>
+        <h4>Initiation à l’utilisation des services cloud pour l’hébergement et la sauvegarde.</h4>
+        <p> • Déploiement de VM sur des plateformes AWS et Azure.<br>
+            • Configuration basique des accès sécurisés et sauvegardes en ligne.<br>
+            • Familiarité avec les modèles SaaS, PaaS et IaaS.
+        </p>
+      </div>
+
+      <div class="competence-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Supervision des Réseaux</h3>
+        <h4>Suivi du bon fonctionnement des équipements et analyse du trafic réseau.</h4>
+        <p> • Mise en place de solutions de supervision (PRTG, Zabbix, Nagios).<br>
+            • Configuration d’alertes et de rapports de performance.<br>
+            • Analyse du trafic et détection d’anomalies via Wireshark ou outils spécialisés.
+        </p>
+      </div>
+
+      <div class="competence-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Sécurité informatique et Cybersécurité</h3><br>
+        <h4>Mise en œuvre des bonnes pratiques pour sécuriser les systèmes et réseaux.</h4>
+        <p>• Configuration de pare-feu, VPN et filtrage d’accès.<br>
+           • Sécurisation des VLAN et des sessions administratives.<br>
+           • Déploiement et supervision d’un système IDS/IPS pour la détection et la prévention des intrusions.<br>
+           • Analyse basique de vulnérabilités et gestion des mises à jour.<br>
+           • Sensibilisation des utilisateurs à la sécurité des données.
+
+        </p>
+      </div>
+
+      <div class="competence-card">
+        <i class="fas fa-satellite-dish"></i>
+        <h3>Télécommunications</h3><br>
+        <h4>Connaissance des principes et technologies de communication numérique.</h4>
+        <p> • Notions sur la fibre optique, la 4G/5G et la VoIP.<br>
+            • Compréhension des concepts de bande passante, multiplexage et QoS.<br>
+        </p>
+      </div>
+
+      <div class="competence-card">
+        <i class="fas fa-code"></i>
+        <h3>Scripting et Programmation</h3><br>
+        <h4>Utilisation du code pour automatiser certaines tâches administratives.</h4>
+        <p>• Création de scripts simples en Python, Bash ou PowerShell.<br>
+           • Notions de programmation en C/C++ et Java.<br>
+           • Développement web (HTML, CSS, JavaScript, php).
+        </p>
+      </div>
+
+       <div class="competence-card">
+        <i class="fas fa-database"></i>
+        <h3> Base de Données</h3><br>
+        <h4>Conception et gestion de bases de données.</h4>
+        <p>• Création de tables, requêtes et vues SQL.<br>
+           • Gestion des utilisateurs et des droits d’accès.<br>
+           • Sauvegarde et restauration de données.
+        </p>
+      </div>
+
+
+      <div class="competence-card">
+        <i class="fas fa-tasks"></i>
+        <h3>Gestion de projets et documentation technique</h3><br>
+        <h4>Maîtrise des méthodes d’organisation et de suivi des projets techniques.</h4>
+        <p>• Planification des tâches, suivi des activités et évaluation des résultats.<br>
+           • Rédaction de rapports techniques et conception de schémas réseau clairs.<br>
+           • Documentation des procédures d’installation, de maintenance et d’exploitation.<br>
+        </p>
+      </div>
+    </section>
+
+    <!-- LOGICIELS ET OUTILS -->
+    <section class="logiciels-section">
+      <h2>Logiciels et Outils Professionnels</h2>
+      <div class="logiciels-grid">
+        <div class="logiciel-card">
+          <img src="Logo_Competences/630px-Proxmox-logo.png" alt="Proxmox">
+          <span>Proxmox VE</span>
+        </div>
+       <div class="logiciel-card">
+          <img src="Logo_Competences/vmware-esxi_original_original.png" alt="ESXI">
+          <span>VMware ESXI</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/VMware_Workstation_11.0_icon.png" alt="VMware">
+          <span>VMware  Workstation</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Hyper-V_Logo.png" alt="Hyper-V">
+          <span>Hyper-V</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/VirtualBox-Logo-2024.png" alt="VirtualBox">
+          <span>Oracle VirtualBox</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/packet-tracer.png" alt="Cisco Packet Tracer">
+          <span>Packet Tracer</span>
+        </div>
+         <div class="logiciel-card">
+           <img src="Logo_Competences/GNS3_logo.png" alt="">
+           <span>GNS3</span>
+        </div>
+         <div class="logiciel-card">
+           <img src="Logo_Competences/EVE-NG.png" alt="">
+           <span>EVE-NG</span>
+        </div>
+         <div class="logiciel-card">
+           <img src="Logo_Competences/securecrt-20250619160218.png" alt="">
+           <span>SecureCRT</span>
+        </div>
+         <div class="logiciel-card">
+           <img src="Logo_Competences/PuTTY_icon_128px.png" alt="">
+           <span>PuTTY</span>
+         </div>
+         <div class="logiciel-card">
+           <img src="Logo_Competences/Cisco_logo.png" alt="Cisco">
+           <span>Cisco</span>
+         </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Mikrotik.png" alt="">
+          <span>MikroTik</span>
+        </div>
+         <div class="logiciel-card">
+           <img src="Logo_Competences/PfSense_logo.png" alt="">
+           <span>pfSense</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Nagios_logo.png" alt="">
+          <span>Nagios</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Zabbix_logo.png" alt="">
+          <span>Zabbix</span>
+        </div>
+        <div class="logiciel-card">
+         <img src="Logo_Competences/Prtg-network-monitor-logo.png" alt="">
+         <span>PRTG Network Monitor</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Wireshark_Icon.png" alt="Wireshark">
+          <span>Wireshark</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Logo_nmap.png" alt="">
+          <span>Nmap</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Fortinet_Logo.png" alt="">
+          <span>Fortinet</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Metasploit-logo.png" alt="">
+          <span>Metasploit Framework</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Greenbone Vulnerability Management.png" alt="">
+          <span>Greenbone Vulnerability Management (GVM)</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Suricata_IDS.png" alt="">
+          <span>Suricata</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Visual_Studio_Code_1.35_icon.png" alt="">
+          <span>VS Code</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Codeblocks_logo1.png" alt="">
+          <span>CodeBloks</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Dev-C++_logo.png" alt="">
+          <span>Dev-C++</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/PyCharm.png" alt="">
+          <span>PyCharm</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/MySQL Workbench.png" alt="">
+          <span>MySQL Workbench</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/PhpMyAdmin_logo.png" alt="">
+          <span>phpMyAdmin</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Microsoft SQL Server.png" alt="">
+          <span>Microsoft SQL Server</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/ELK.png" alt="">
+          <span>ELK Stack</span>
+        </div>
+        <div class="logiciel-card">
+        <img src="Logo_Competences/Docker_(container_engine)_logo.png" alt="">
+          <span>Docker</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Git.png" alt="">
+          <span>Git</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Github.png" alt="">
+          <span>GitHub</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/PowerShell.png" alt="">
+          <span>PowerShell</span>
+        </div>
+          <div class="logiciel-card">
+          <img src="Logo_Competences/Windows_Server.png" alt="">
+          <span>Windows Server</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Debian_logo.png" alt="">
+          <span>Debian</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Ubuntu.png" alt="">
+          <span>Ubuntu</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Kali_Linux_Logo.png" alt="">
+          <span>Kali Linux</span>
+        </div>
+        <div class="logiciel-card">
+        <img src="Logo_Competences/microsoft-office-seeklogo.png" alt="">
+          <span>Microsoft Office</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/TeamViewer.png" alt="">
+          <span>TeamViewer</span>
+        </div>
+        <div class="logiciel-card">
+          <img src="Logo_Competences/Draw.io.png" alt="">
+          <span>Draw.io</span>
+        </div>
+      </div>
+     
+      <!-- PAGINATION -->
+      <div class="pagination">
+        <button id="prevPage" class="page-btn" aria-label="Page précédente">
+        <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+      <div id="pageNumbers" class="page-numbers"></div>
+
+        <button id="nextPage" class="page-btn" aria-label="Page suivante">
+        <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+
+    </section>
+  </main>
+
+  <script src="competences.js"></script>
+</body>
+</html>
+
+

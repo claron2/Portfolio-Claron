@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="apropos.css">
+    <link rel="icon" type="image/png" href="image/icone4.png" />
+  
+  <title>À propos - Claron Cyriel BEMBA</title>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <a href="index.html" aria-label="Retour à la page d’accueil">
+    <h1>CLA<span class="accent">Ron</span></h1>
+    </a>
+  </div>
+
+
+ <nav class="navbar" role="navigation" aria-label="Navigation principale">
+
+ <!-- 🌙/☀️ Toggle du mode -->
+      <button id="theme-toggle" class="theme-toggle">
+          <span class="theme-toggle"><i class="fa-solid fa-moon"></i></span>     
+      </button> 
+
+      <button id="burger" class="burger" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+        <span class="burger-lines"><i class="fa-solid fa-bars"></i></span>
+      </button>
+
+      <ul id="nav-list" class="nav-list" aria-hidden="true">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html"  class="active">À propos</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- overlay & close button inserted in DOM by JS for accessibility/stacking -->
+    </nav>
+</header>
+
+  <div class="background-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <main class="main-container">
+    <div class="content-wrapper">
+
+      <!-- Photo -->
+      <div class="photo-section fade-in-left">
+        <div class="photo-container">
+          <div class="photo-frame">
+            <img src="image/claron.jpg" alt="Photo de Claron">
+          </div>
+          <div class="photo-glow"></div>
+        </div>
+
+        <!-- Bouton Plus + Actions -->
+        <div class="action-menu">
+          <div class="plus-btn" id="plusBtn">
+            <i class="fas fa-plus"></i>
+          </div>
+
+          <div class="menu-options" id="menuOptions">
+            <a href="CV/MonCV.pdf" class="menu-option left" download>
+              <i class="fas fa-download"></i>
+              <span class="cv">Télécharger mon CV</span>
+            </a>
+
+            <a href="contact.html" class="menu-option right">
+              <i class="fas fa-envelope"></i>
+              <span>Me contacter</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- À propos -->
+      <div class="about-section fade-in-right">
+        <div class="section-header">
+          <h1>Claron BEMBA</h1>
+          <div class="title-tag">
+            <span>Technicien Supérieur</span>
+            <div class="tag-divider"></div>
+            <span>Réseaux & Télécommunications</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <p class="lead"> 
+            Passionné par la <span class="highlight">sécurité informatique</span>, 
+            les <span class="highlight">systèmes</span> et 
+            les <span class="highlight">réseaux</span>, je développe mes compétences à travers des formations et des projets personnels.
+          </p>
+          <p>
+            J’ai acquis une solide base en conception, déploiement et sécurisation d’infrastructures réseau, ainsi qu’en administration système.
+          </p>
+          <p>
+           Rigoureux, curieux et orienté résultats, je vise à évoluer vers le métier d’ <strong style="color: rgb(151, 15, 15);">ingénieur systèmes, réseaux et sécurité</strong> afin de contribuer à la fiabilité et à la protection des infrastructures informatiques.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="apropos.js"></script>
+</body>
+</html>

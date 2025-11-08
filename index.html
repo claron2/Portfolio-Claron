@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Claron Cyriel BEMBA</title>
+
+  <link rel="icon" type="image/png" href="image/icone4.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="logo" aria-hidden="true">
+      <a href="index.html" aria-label="Retour à la page d’accueil">
+      <h1>CLA<span class="accent">Ron</span></h1>
+      </a>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+       <!-- 🌙/☀️ Toggle du mode -->
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="theme-toggle"><i class="fa-solid fa-moon"></i></span>     
+      </button> 
+
+      <button id="burger" class="burger" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+        <span class="burger-lines"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      
+
+      <ul id="nav-list" class="nav-list" aria-hidden="true">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>  
+   
+      <!-- overlay & close button inserted in DOM by JS for accessibility/stacking -->
+    </nav>
+  </header>
+
+  <!-- MAIN / HERO -->
+  <main>
+    <section id="acceuil" class="hero section">
+      <div class="hero-content">
+        <h3>Salut, je suis</h3>
+        <h1 id="titre-anime"><span id="texte"></span><span id="curseur"></span></h1>
+        <h4>Futur Ingénieur systèmes, réseaux & sécurité</h4>
+        <p>Fort de mon expertise en conception, optimisation et sécurisation d’infrastructures IT, je partage ici mes projets, mes compétences et mes réalisations. Découvrez mon univers professionnel à travers ce portfolio.</p>
+
+        <div class="actions">
+          <a href="CV/MonCV.pdf" class="btn download" download>
+            <i class="fa-solid fa-download"></i> Télécharger le CV
+          </a>
+          <a href="contact.html" class="btn contact">
+            <i class="fa-solid fa-envelope"></i> Contactez-moi
+          </a>
+        </div>
+
+        <div class="social">
+          <a href="https://www.facebook.com/share/1632iAvn82/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/claron_ljn?igsh=MWhscDVpZDhjMXF5bQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@claron_ljn?_r=1&_t=ZM-91Blphg8xSN" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://x.com/shadowstorm0001?s=21" target="_blank" rel="noopener" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://wa.me/242069117285" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/claron-cyriel-bemba" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="photo">
+        <img src="image/claron.jpg" alt="Photo de Claron Cyriel BEMBA" />
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

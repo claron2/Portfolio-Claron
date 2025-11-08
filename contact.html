@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Claron Cyriel BEMBA</title>
+
+ <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="contact.css">
+  <link rel="icon" type="image/png" href="image/icone4.png" />
+</head>
+<body>
+
+  <!-- HEADER (identique aux autres pages) -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html" aria-label="Retour à la page d’accueil">
+      <h1>CLA<span class="accent">Ron</span></h1>
+      </a>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+      <!-- 🌙/☀️ Toggle du mode -->
+      <button id="theme-toggle" class="theme-toggle">
+          <span class="theme-toggle"><i class="fa-solid fa-moon"></i></span>     
+      </button> 
+
+      <button id="burger" class="burger" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+        <span class="burger-lines"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      
+      <ul id="nav-list" class="nav-list" aria-hidden="true">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Animated background (same vibe as accueil) -->
+  <div class="background-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Main contact area -->
+  <main class="contact-main">
+    <section class="contact-card" aria-labelledby="contactTitle">
+
+      <div class="card-header">
+        <h2 id="contactTitle">Contactez-<span>moi</span></h2>
+        <p>Envoyez-moi un message pour collaboration, questions ou opportunités professionnelles.</p>
+      </div>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="row">
+          <div class="input-group">
+            <label for="from_name" class="con">Nom</label>
+            <input id="from_name" name="from_name" type="text" placeholder="Votre nom complet" required>
+          </div>
+          <div class="input-group">
+            <label for="from_email" class="con">Email</label>
+            <input id="from_email" name="from_email" type="email" placeholder="votre@mail.com" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="subject" class="con">Sujet</label>
+          <input id="subject" name="subject" type="text" placeholder="Sujet du message" required>
+        </div>
+
+        <div class="input-group">
+          <label for="message" class="con">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet, votre demande..." required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-send" id="sendBtn">
+            <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
+            <span class="btn-text">Envoyer le message</span>
+          </button>
+        </div>
+
+        <!-- feedback -->
+        <div class="feedback">
+          <div id="msg-success" class="msg success" role="status" aria-live="polite">✅ Message envoyé — je te réponds vite !</div>
+          <div id="msg-error" class="msg error" role="alert" aria-live="assertive">❌ Oups — une erreur. Réessaie ou contacte via LinkedIn.</div>
+        </div>
+      </form>
+
+      <!-- neon glow under card -->
+      <div class="neon-glow" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <!-- Socials footer -->
+  <footer class="contact-footer" aria-label="Suivez-moi">
+    <div class="follow-title">Suivez-moi</div>
+    <div class="socials">
+      <!-- Replace href with your own profile links -->
+      <a href="https://www.facebook.com/share/1632iAvn82/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/claron_ljn?igsh=MWhscDVpZDhjMXF5bQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@claron_ljn?_r=1&_t=ZM-91Blphg8xSN" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://x.com/shadowstorm0001?s=21" target="_blank" rel="noopener" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://wa.me/242069117285" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://github.com/yourprofile" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/claron-cyriel-bemba" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <!-- Page JS -->
+  <script src="contact.js"></script>
+</body>
+</html>
