@@ -448,18 +448,14 @@ textarea {
 /* RESPONSIVE                    */
 /* ============================= */
 @media (max-width: 900px) {
-  .contact-card {
-    padding: 18px;
-    margin: 0 10px;
-  }
-  .row {
-    flex-direction: column;
-  }
   .burger { display: block; }
+  
   .nav-list {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100vh;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -487,7 +483,11 @@ textarea {
     transition: transform 0.45s ease, opacity 0.45s ease;
   }
 
-  .nav-list.show a { opacity: 1; transform: translateY(0); }
+  .nav-list.show a { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+  
   .header {
     padding: 16px 18px;
     border-radius: 10px;
@@ -503,6 +503,31 @@ textarea {
     font-size: 0.9rem;
     padding: 9px 12px;
   }
+}
+
+/* ============================= */
+/* SMALL PHONES <280px */
+/* ============================= */
+@media (max-width: 280px) {
+  html { font-size: 12px; }
+
+ .header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 8px 10px;
+  gap: 2px;
+ }
+
+ .logo h1 {
+  font-size: 1rem;
+  white-space: nowrap;
+ }
+
+ .burger {
+  font-size: 1.2rem;
+ }
 }
 
 /* ============================= */
@@ -535,7 +560,7 @@ body.light-mode .header {
   box-shadow: 0 0 12px rgba(255, 0, 0, 0.1);
 }
 body.light-mode .navbar a {
-  color: white;
+  color: black;
 }
 
 body.light-mode .nav-list a::after {
@@ -583,6 +608,44 @@ body.light-mode .socials a {
 body.light-mode .socials a:hover {
   background-color:  #ff2a2a;
 }
+
+
+/*============================= */
+/* RESPONSIVE - MOBILE <993px */
+/* ============================= */
+@media (max-width: 993px) {
+  body.light-mode .nav-list a {
+    color: white;
+  }
+}
+
+/* ============================= */
+/* SMALL PHONES <500px */
+/* ============================= */
+@media (max-width: 500px) {
+  body.light-mode .nav-list a {
+    color: white;
+  }
+}
+
+/* ============================= */
+/* SMALL PHONES <350px */
+/* ============================= */
+@media (max-width: 350px) {
+  body.light-mode .nav-list a {
+    color: white;
+  }
+}
+
+/* ============================= */
+/* SMALL PHONES <280px */
+/* ============================= */
+@media (max-width: 280px) {
+  body.light-mode .nav-list a {
+    color: white;
+  }
+}
+
 
 /* ============================= */
 /* ANIMATION D'ENTRÉE CONTACT    */
