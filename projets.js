@@ -168,3 +168,39 @@ toggleBtn.addEventListener('click', () => {
   // Sauvegarde le choix
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
+
+
+/* ===== GOOGLE ANALYTICS EVENTS ===== */
+
+// 1️⃣ Suivi du téléchargement du CV
+const cvBtn = document.querySelector('.btn.download');
+if (cvBtn) {
+  cvBtn.addEventListener('click', () => {
+    gtag('event', 'download_cv', {
+      event_category: 'Portfolio',
+      event_label: 'CV principal',
+      value: 1
+    });
+  });
+}
+
+// 2️⃣ Suivi du clic sur le bouton "Contactez-moi"
+const contactBtn = document.querySelector('.btn.contact');
+if (contactBtn) {
+  contactBtn.addEventListener('click', () => {
+    gtag('event', 'click_contact', {
+      event_category: 'Portfolio',
+      event_label: 'Bouton contact',
+      value: 1
+    });
+  });
+}
+
+// 3️⃣ Suivi du changement de thème
+toggleBtn.addEventListener('click', () => {
+  const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
+  gtag('event', 'change_theme', {
+    event_category: 'Interface',
+    event_label: theme
+  });
+});
