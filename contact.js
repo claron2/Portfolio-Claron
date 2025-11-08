@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
     transition: 'opacity .35s ease',
     zIndex: '1050'
   });
-  document.body.appendChild(overlay);
 
   const closeBtn = document.createElement('button');
   closeBtn.id = 'nav-close';
