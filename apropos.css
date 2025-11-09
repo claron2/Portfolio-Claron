@@ -317,7 +317,6 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: all 0.5s ease;
-  gap: 30px;
 }
 
 .menu-options.active {
